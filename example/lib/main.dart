@@ -51,60 +51,160 @@ class MyHomePage extends StatefulWidget with WidgetsBindingObserver {
 class _MyHomePageState extends State<MyHomePage> {
   final _documents = [
     {
-      'name': 'Learning Android Studio',
+      'name': '011002100411_64999303.pdf',
       'link':
-          'http://barbra-coco.dyndns.org/student/learning_android_studio.pdf'
+      'https://chat.bitzhedu.com:8050/uploads/011002100411_64999303.pdf'
     },
     {
-      'name': 'Android Programming Cookbook',
+      'name': '011002100511_68609465.pdf',
       'link':
-          'http://enos.itcollege.ee/~jpoial/allalaadimised/reading/Android-Programming-Cookbook.pdf'
+      'https://chat.bitzhedu.com:8050/uploads/011002100511_68609465.pdf'
     },
     {
-      'name': 'iOS Programming Guide',
+      'name': 'ed.jpg',
       'link':
-          'http://darwinlogic.com/uploads/education/iOS_Programming_Guide.pdf'
+      'https://chat.bitzhedu.com:8050/uploads/ed.jpg'
     },
     {
-      'name': 'Objective-C Programming (Pre-Course Workbook',
+      'name': 'wx_camera_1650711114829.jpg',
       'link':
-          'https://www.bignerdranch.com/documents/objective-c-prereading-assignment.pdf'
+      'https://chat.bitzhedu.com:8050/uploads/wx_camera_1650711114829.jpg'
     },
+    {
+      'name': 'Wx_camera_1650711114829.jpeg',
+      'link':
+      'https://chat.bitzhedu.com:8050/uploads/Wx_camera_1650711114829.jpeg'
+    },
+    {
+      'name': 'reload.png',
+      'link':
+          'https://chat.bitzhedu.com:8050/uploads/reload.png'
+    },
+    {
+      'name': 'ic_download.png',
+      'link':
+      'https://chat.bitzhedu.com:8050/uploads/ic_download.png'
+    },
+    {
+      'name': 'Reload.PNG',
+      'link':
+      'https://chat.bitzhedu.com:8050/uploads/Reload.PNG'
+    },
+    {
+      'name': 'test.txt',
+      'link':
+          'https://chat.bitzhedu.com:8050/uploads/test.txt'
+    },
+    {
+      'name': 'VID_20220424_065637.mp4',
+      'link':
+      'https://chat.bitzhedu.com:8050/uploads/VID_20220424_065637.mp4'
+    }
   ];
 
   final _images = [
     {
-      'name': 'Arches National Park',
+      'name': '011002100411_64999303.pdf',
       'link':
-          'https://upload.wikimedia.org/wikipedia/commons/6/60/The_Organ_at_Arches_National_Park_Utah_Corrected.jpg'
+      'https://chat.bitzhedu.com:8050/uploads/011002100411_64999303.pdf'
     },
     {
-      'name': 'Canyonlands National Park',
+      'name': '011002100511_68609465.pdf',
       'link':
-          'https://upload.wikimedia.org/wikipedia/commons/7/78/Canyonlands_National_Park%E2%80%A6Needles_area_%286294480744%29.jpg'
+      'https://chat.bitzhedu.com:8050/uploads/011002100511_68609465.pdf'
     },
     {
-      'name': 'Death Valley National Park',
+      'name': 'ed.jpg',
       'link':
-          'https://upload.wikimedia.org/wikipedia/commons/b/b2/Sand_Dunes_in_Death_Valley_National_Park.jpg'
+      'https://chat.bitzhedu.com:8050/uploads/ed.jpg'
     },
     {
-      'name': 'Gates of the Arctic National Park and Preserve',
+      'name': 'wx_camera_1650711114829.jpg',
       'link':
-          'https://upload.wikimedia.org/wikipedia/commons/e/e4/GatesofArctic.jpg'
+      'https://chat.bitzhedu.com:8050/uploads/wx_camera_1650711114829.jpg'
+    },
+    {
+      'name': 'Wx_camera_1650711114829.jpeg',
+      'link':
+      'https://chat.bitzhedu.com:8050/uploads/Wx_camera_1650711114829.jpeg'
+    },
+    {
+      'name': 'reload.png',
+      'link':
+      'https://chat.bitzhedu.com:8050/uploads/reload.png'
+    },
+    {
+      'name': 'ic_download.png',
+      'link':
+      'https://chat.bitzhedu.com:8050/uploads/ic_download.png'
+    },
+    {
+      'name': 'Reload.PNG',
+      'link':
+      'https://chat.bitzhedu.com:8050/uploads/Reload.PNG'
+    },
+    {
+      'name': 'test.txt',
+      'link':
+      'https://chat.bitzhedu.com:8050/uploads/test.txt'
+    },
+    {
+      'name': 'VID_20220424_065637.mp4',
+      'link':
+      'https://chat.bitzhedu.com:8050/uploads/VID_20220424_065637.mp4'
     }
   ];
 
   final _videos = [
     {
-      'name': 'Big Buck Bunny',
+      'name': '011002100411_64999303.pdf',
       'link':
-          'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
+      'https://chat.bitzhedu.com:8050/uploads/011002100411_64999303.pdf'
     },
     {
-      'name': 'Elephant Dream',
+      'name': '011002100511_68609465.pdf',
       'link':
-          'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4'
+      'https://chat.bitzhedu.com:8050/uploads/011002100511_68609465.pdf'
+    },
+    {
+      'name': 'ed.jpg',
+      'link':
+      'https://chat.bitzhedu.com:8050/uploads/ed.jpg'
+    },
+    {
+      'name': 'wx_camera_1650711114829.jpg',
+      'link':
+      'https://chat.bitzhedu.com:8050/uploads/wx_camera_1650711114829.jpg'
+    },
+    {
+      'name': 'Wx_camera_1650711114829.jpeg',
+      'link':
+      'https://chat.bitzhedu.com:8050/uploads/Wx_camera_1650711114829.jpeg'
+    },
+    {
+      'name': 'reload.png',
+      'link':
+      'https://chat.bitzhedu.com:8050/uploads/reload.png'
+    },
+    {
+      'name': 'ic_download.png',
+      'link':
+      'https://chat.bitzhedu.com:8050/uploads/ic_download.png'
+    },
+    {
+      'name': 'Reload.PNG',
+      'link':
+      'https://chat.bitzhedu.com:8050/uploads/Reload.PNG'
+    },
+    {
+      'name': 'test.txt',
+      'link':
+      'https://chat.bitzhedu.com:8050/uploads/test.txt'
+    },
+    {
+      'name': 'VID_20220424_065637.mp4',
+      'link':
+      'https://chat.bitzhedu.com:8050/uploads/VID_20220424_065637.mp4'
     }
   ];
 
@@ -415,16 +515,21 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<String?> _findLocalPath() async {
     var externalStorageDirPath;
     if (Platform.isAndroid) {
-      try {
-        externalStorageDirPath = await AndroidPathProvider.downloadsPath;
-      } catch (e) {
-        final directory = await getExternalStorageDirectory();
-        externalStorageDirPath = directory?.path;
-      }
+      final directory = await getExternalStorageDirectory();
+      externalStorageDirPath = directory?.path;
+//modify by zhengsj on 20220609 for createFileInPublicDownloadsDir can not run properly
+//      try {
+//        externalStorageDirPath = await AndroidPathProvider.downloadsPath;
+//      } catch (e) {
+//        final directory = await getExternalStorageDirectory();
+//        externalStorageDirPath = directory?.path;
+//      }
     } else if (Platform.isIOS) {
       externalStorageDirPath =
           (await getApplicationDocumentsDirectory()).absolute.path;
     }
+
+    print("externalStorageDirPath=${externalStorageDirPath}.....");
     return externalStorageDirPath;
   }
 }

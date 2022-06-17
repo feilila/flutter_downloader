@@ -388,29 +388,36 @@ public class DownloadWorker extends Worker implements MethodChannel.MethodCallHa
                 inputStream = httpConn.getInputStream();
 
 
-                String savedFilePath;
-                // opens an output stream to save into file
-                // there are two case:
-                if (isResume) {
-                    // 1. continue downloading (append data to partial downloaded file)
-                    savedFilePath = savedDir + File.separator + filename;
-                    outputStream = new FileOutputStream(savedFilePath, true);
-                } else {
-                    // 2. new download, create new file
-                    // there are two case according to Android SDK version and save path
-                    // From Android 11 onwards, file is only downloaded to app-specific directory (internal storage)
-                    // or public shared download directory (external storage).
-                    // The second option will ignore `savedDir` parameter.
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q && saveInPublicStorage) {
-                        Uri uri = createFileInPublicDownloadsDir(filename, contentType);
-                        savedFilePath = getMediaStoreEntryPathApi29(uri);
-                        outputStream = context.getContentResolver().openOutputStream(uri, "w");
-                    } else {
-                        File file = createFileInAppSpecificDir(filename, savedDir);
-                        savedFilePath = file.getPath();
-                        outputStream = new FileOutputStream(file, false);
-                    }
-                }
+////////////////////////////////////////////////////////////////////////////////////////
+//  modify by zhengsj on 20220609 for createFileInPublicDownloadsDir can not run properly
+//                String savedFilePath;
+//                // opens an output stream to save into file
+//                // there are two case:
+//                if (isResume) {
+//                    // 1. continue downloading (append data to partial downloaded file)
+//                    savedFilePath = savedDir + File.separator + filename;
+//                    outputStream = new FileOutputStream(savedFilePath, true);
+//                } else {
+//                    // 2. new download, create new file
+//                    // there are two case according to Android SDK version and save path
+//                    // From Android 11 onwards, file is only downloaded to app-specific directory (internal storage)
+//                    // or public shared download directory (external storage).
+//                    // The second option will ignore `savedDir` parameter.
+//                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q && saveInPublicStorage) {
+//                        Uri uri = createFileInPublicDownloadsDir(filename, contentType);
+//                        savedFilePath = getMediaStoreEntryPathApi29(uri);
+//                        outputStream = context.getContentResolver().openOutputStream(uri, "w");
+//                    } else {
+//                        File file = createFileInAppSpecificDir(filename, savedDir);
+//                        savedFilePath = file.getPath();
+//                        outputStream = new FileOutputStream(file, false);
+//                    }
+//                }
+                String savedFilePath = savedDir + File.separator + filename;
+                //File file = new File(context.getExternalFilesDir(null), filename);
+                File file = new File(savedFilePath);
+                outputStream = new FileOutputStream(file);
+/////////////20220609 modify end here/////////////////////////////////////////////////////////
 
                 long count = downloadedBytes;
                 int bytesRead = -1;
